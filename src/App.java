@@ -1,7 +1,22 @@
+import java.io.File;
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.Scanner;
 public class App {
-    public static void main(String[] args) {
+    public static void main(String[] args) throws Exception{
+
+        //failist lugemine ja järjendiks tegemine
+        ArrayList<String[]> punktid = new ArrayList<>();
+        File fail = new File("punktid.txt");
+        Scanner sc = new Scanner(fail);
+        while (sc.hasNextLine()) {
+            String rida = sc.nextLine();
+            String[] küsimusJaPunktid = rida.split("- ");
+            System.out.println(Arrays.toString(küsimusJaPunktid));
+            punktid.add(küsimusJaPunktid);
+        }
+        //System.out.println(punktid.get(1)[2]);
+
 
         //Küsimused peab siia looma
         String küs1 = "Kui palju meeldib matemaatika?" + "\n1\n2\n3\n4\n5";
@@ -20,8 +35,9 @@ public class App {
         //Käivitamine
         teeTest(informaatikaKüsimused);
         teeTest(majandusKüsimused);
-
     }
+
+    
 
 
     //Testi tegemise meetod

@@ -1,11 +1,9 @@
-import java.util.ArrayList;
-
 public class Informaatika extends Küsimused{
     public static void main(String[] args) {
 
     }
 
-    public Informaatika(ArrayList<String> küsimused, String vastus, String valdkond) {
+    public Informaatika(String küsimused, String vastus, String valdkond) {
         super(küsimused, vastus, valdkond);
         this.valdkond = "informaatika";
     }

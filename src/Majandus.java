@@ -1,7 +1,5 @@
-import java.util.ArrayList;
-
 public class Majandus extends Küsimused{
-    public Majandus(ArrayList<String> küsimused, String vastus, String valdkond) {
+    public Majandus(String küsimused, String vastus, String valdkond) {
         super(küsimused, vastus, valdkond);
     }
 

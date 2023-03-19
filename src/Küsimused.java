@@ -1,7 +1,8 @@
 import java.util.ArrayList;
 
 public class Küsimused {
-    ArrayList<String> küsimused;
+    public boolean küsimus;
+    String küsimused;
     String vastus;
     String valdkond;
 
@@ -10,7 +11,7 @@ public class Küsimused {
         return "Täpsustamata";
     }
 
-    public Küsimused(ArrayList<String> küsimused, String vastus, String valdkond){
+    public Küsimused(String küsimused, String vastus, String valdkond){
         this.küsimused = küsimused;
         this.vastus = vastus;
         this.valdkond = valdkond;
